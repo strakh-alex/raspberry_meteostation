@@ -32,7 +32,7 @@ while True:
         ]
 
         client = InfluxDBClient('localhost', 8086, '<username>', '<password>', '<database>')
-        client.create_database('telegraf')
+        client.create_database('<database>')
         client.write_points(json_body)
  
     except RuntimeError as error:
